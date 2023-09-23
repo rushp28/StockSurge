@@ -8,7 +8,7 @@ public class StockItemModel {
     private int _quantityInStock;
     
     // constructor method
-    public StockItemModel(int quantityInStock, string code, string name) {
+    public StockItemModel(string code, string name, int quantityInStock) {
         _code = code;
         _name = name;
         _quantityInStock = quantityInStock;
