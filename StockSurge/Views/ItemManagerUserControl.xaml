@@ -1,0 +1,145 @@
+﻿<UserControl x:Class="StockSurge.Views.ItemManagerUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:StockSurge.Views"
+             mc:Ignorable="d"
+             d:DesignHeight="1080" 
+             d:DesignWidth="900">
+    
+    
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                     From="0.5"
+                                     To="1"
+                                     Duration="0:0:0.5" />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </UserControl.Triggers>
+    
+    <!-- Window Wrapper -->
+    <Border Style="{StaticResource WindowWrapperStyle}">
+        
+        <!-- Window Wrapper Grid -->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <!-- Title Bar Wrapper -->
+            <Border Grid.Row="0" Grid.Column="0"
+                    Style="{StaticResource TitleBarWrapperStyle}">
+                
+                <!-- Title Bar Wrapper Grid -->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="50" />
+                    </Grid.ColumnDefinitions>
+                    
+                    <!-- Minimize Button -->
+                    <Button Grid.Column="1" Grid.Row="0"
+                            Style="{StaticResource TitleBarButtonStyle}" />
+                    
+                    <!-- Close Button -->
+                    <Button Grid.Column="2" Grid.Row="0"
+                            Style="{StaticResource TitleBarButtonStyle}" />
+                </Grid>
+            </Border>
+            
+            <!-- Add and Remove Item Wrapper -->
+            <Border Grid.Row="1" Grid.Column="0"
+                    Margin="100 50"
+                    Padding="50"
+                    CornerRadius="20"
+                    Style="{StaticResource ActionWrapper}">
+                
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Grid Grid.Row="0" Grid.Column="0"
+                          HorizontalAlignment="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        
+                        <TextBlock Grid.Row="0" Grid.Column="0" 
+                                   Text="Stock Code"
+                                   VerticalAlignment="Center" />
+                        <TextBlock Grid.Row="1" Grid.Column="0" 
+                                   Text="Stock Name"
+                                   VerticalAlignment="Center" />
+                        <TextBlock Grid.Row="2" Grid.Column="0"
+                                   Text="Quantity in Stock"
+                                   VerticalAlignment="Center" />
+                    </Grid>
+                    
+                    <Grid Grid.Row="0" Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        
+                        <TextBox Grid.Row="0" Grid.Column="0" 
+                                 Text="{Binding CodeToAddItem}" 
+                                 Style="{StaticResource EnabledTextBoxStyle}" />
+                        <TextBox Grid.Row="1" Grid.Column="0"
+                                    Text="{Binding NameToAddItem}"
+                                    Style="{StaticResource EnabledTextBoxStyle}" />
+                        <TextBox Grid.Row="2" Grid.Column="0"
+                                    Text="{Binding QuantityInStockToAddItem}"
+                                    Style="{StaticResource EnabledTextBoxStyle}" />
+                    </Grid>
+                    
+                    <TextBlock Grid.Row="1" Grid.Column="0"
+                               Grid.ColumnSpan="2"
+                               Text="{Binding AddItemStatus}"></TextBlock>
+                    
+                    <Grid Grid.Row="2" Grid.Column="0"
+                          Grid.ColumnSpan="2"
+                          HorizontalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        
+                        <Button Grid.Row="0" Grid.Column="0"
+                                Command="{Binding AddItemCommand}"
+                                Content="Item"
+                                Style="{StaticResource ActionButtonStyle}"></Button>
+                        
+                        <Button Grid.Row="0" Grid.Column="1"
+                                Command="{Binding AddItemCommand}"
+                                Content="Item"
+                                Style="{StaticResource ActionButtonStyle}"></Button>
+                    </Grid>
+                </Grid>
+            </Border>
+            
+            <!-- Update Item Quantity Wrapper -->
+            
+        </Grid>
+    </Border>
+</UserControl>

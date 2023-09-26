@@ -11,7 +11,7 @@ public static class HandlerModel {
         
         TransactionLogModel transactionLog = new TransactionLogModel(logDateTime, transactionType, stockItem, changedQuantity, newQuantityInStock);
 
-        DatabaseHandler.InsertTransactionLog(transactionLog);
+        DatabaseHandlerModel.InsertTransactionLog(transactionLog);
     }
     
     // add a stock item method
@@ -19,8 +19,9 @@ public static class HandlerModel {
         
         StockItemModel stockItem = new StockItemModel(code, name, quantityInStock);
         
-        if (DatabaseHandler.GetStockItemByCode(stockItem.GetCode()) == null) {
-            DatabaseHandler.InsertStockItem(stockItem);
+        if (DatabaseHandlerModel.GetStockItemByCode(stockItem.GetCode()) == null) {
+            
+            DatabaseHandlerModel.InsertStockItem(stockItem);
             AddTransactionLog("Item Added", stockItem, stockItem.GetQuantityInStock(), stockItem.GetQuantityInStock());
             
             return true;
@@ -29,13 +30,14 @@ public static class HandlerModel {
         return false;
     }
     
-    // remove a stock item
+    // remove a stock item method
     public static bool RemoveStockItem(string code) {
         
-        StockItemModel? stockItem = DatabaseHandler.GetStockItemByCode(code);
+        StockItemModel? stockItem = DatabaseHandlerModel.GetStockItemByCode(code);
 
         if (stockItem != null) {
-            DatabaseHandler.DeleteStockItem(stockItem);
+            
+            DatabaseHandlerModel.DeleteStockItem(stockItem);
             AddTransactionLog("Item Removed", stockItem, 0, stockItem.GetQuantityInStock());
 
             return true;
@@ -44,16 +46,17 @@ public static class HandlerModel {
         return false;
     }
     
-    // add quantity to stock item's quantity in stock
+    // add quantity to stock item's quantity in stock method
     public static bool AddStockItemQuantity(string code, int quantityToAdd) {
         
-        StockItemModel? stockItem = DatabaseHandler.GetStockItemByCode(code);
+        StockItemModel? stockItem = DatabaseHandlerModel.GetStockItemByCode(code);
         
         if (stockItem != null) {
+            
             int newQuantityInStock = stockItem.GetQuantityInStock() + quantityToAdd;
             stockItem.SetQuantityInStock(newQuantityInStock);
             
-            DatabaseHandler.UpdateStockItemQuantity(stockItem);
+            DatabaseHandlerModel.UpdateStockItemQuantity(stockItem);
             AddTransactionLog("Quantity Added", stockItem, quantityToAdd, newQuantityInStock);
             
             return true;
@@ -62,16 +65,17 @@ public static class HandlerModel {
         return false;
     }
     
-    // remove quantity to stock item's quantity in stock
+    // remove quantity to stock item's quantity in stock method
     public static bool RemoveStockItemQuantity(string code, int quantityToRemove) {
         
-        StockItemModel? stockItem = DatabaseHandler.GetStockItemByCode(code);
+        StockItemModel? stockItem = DatabaseHandlerModel.GetStockItemByCode(code);
         
         if (stockItem != null) {
+            
             int newQuantityInStock = stockItem.GetQuantityInStock() - quantityToRemove;
             stockItem.SetQuantityInStock(newQuantityInStock);
             
-            DatabaseHandler.UpdateStockItemQuantity(stockItem);
+            DatabaseHandlerModel.UpdateStockItemQuantity(stockItem);
             AddTransactionLog("Quantity Removed", stockItem, quantityToRemove, newQuantityInStock);
             
             return true;

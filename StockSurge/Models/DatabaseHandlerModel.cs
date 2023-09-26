@@ -6,26 +6,29 @@ using SQLitePCL;
 
 namespace StockSurge.Models; 
 
-public static class DatabaseHandler {
+public static class DatabaseHandlerModel {
     
     // get a sqlite connection method
     private static SqliteConnection GetSqliteConnection() {
         
+        // get the absolute path of the sqlite database
         string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
-        for (int i = 0; i < 5; i++)
-        {
+        for (int i = 0; i < 5; i++) {
             baseDirectory = Directory.GetParent(baseDirectory).FullName;
         }
         string absolutePath = Path.Combine(baseDirectory, "StockSurge.sqlite");
         
+        // create a connection string
         string connectionString = new SqliteConnectionStringBuilder {
             DataSource = absolutePath,
             Mode = SqliteOpenMode.ReadWriteCreate
         }.ToString();
         
+        // initialize batteries
         Batteries.Init();
         raw.SetProvider(new SQLite3Provider_e_sqlite3());
         
+        // return a sqlite connection
         return new SqliteConnection(connectionString);
     }
 
@@ -127,6 +130,7 @@ public static class DatabaseHandler {
     
     // get all the stock items in the sqlite database method
     public static List<StockItemModel>? GetAllStockItems() {
+        
         const string selectStockItemsQuery = "SELECT * FROM stock_items";
 
         using SqliteConnection sqliteConnection = GetSqliteConnection();
@@ -156,8 +160,46 @@ public static class DatabaseHandler {
         return stockItems;
     }
     
+    // get all the transaction logs in the sqlite database method
+    public static List<TransactionLogModel>? GetAllTransactionLogs() {
+        
+        const string selectTransactionLogsQuery = "SELECT * FROM transaction_logs";
+
+        using SqliteConnection sqliteConnection = GetSqliteConnection();
+        sqliteConnection.Open();
+
+        using SqliteCommand sqliteCommand = new SqliteCommand(selectTransactionLogsQuery, sqliteConnection);
+        using SqliteDataReader sqliteDataReader = sqliteCommand.ExecuteReader();
+        
+        List<TransactionLogModel> transactionLogs = new List<TransactionLogModel>();
+
+        try {
+            while (sqliteDataReader.Read()) {
+                string logDateTime = sqliteDataReader.GetString(0);
+                string transactionType = sqliteDataReader.GetString(1);
+                string stockItemCode = sqliteDataReader.GetString(2);
+                string stockItemName = sqliteDataReader.GetString(3);
+                int changedQuantity = sqliteDataReader.GetInt32(4);
+                int newQuantityInStock = sqliteDataReader.GetInt32(5);
+                
+                StockItemModel stockItem = new StockItemModel(stockItemCode, stockItemName, newQuantityInStock);
+
+                transactionLogs.Add(new TransactionLogModel(logDateTime, transactionType, stockItem , changedQuantity, newQuantityInStock));
+            }
+        }
+        catch (Exception e) {
+            Console.WriteLine($"Failed to get all transaction logs: {e.Message}");
+        }
+        finally {
+            sqliteConnection.Close();
+        }
+
+        return transactionLogs;
+    }
+    
     // get a stock item using code from the sqlite database method
     public static StockItemModel? GetStockItemByCode(string selectedCode) {
+        
         const string selectStockItemQuery = "SELECT * FROM stock_items WHERE code = @selectedCode";
 
         using SqliteConnection sqliteConnection = GetSqliteConnection();
@@ -167,6 +209,7 @@ public static class DatabaseHandler {
         sqliteCommand.Parameters.AddWithValue("@selectedCode", selectedCode);
 
         using SqliteDataReader sqliteDataReader = sqliteCommand.ExecuteReader();
+        
         try {
             if (sqliteDataReader.Read()) {
                 string code = sqliteDataReader.GetString(0);

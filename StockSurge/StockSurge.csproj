@@ -8,16 +8,30 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Assets\Images\" />
       <Folder Include="Commands\" />
       <Folder Include="ViewModels\" />
-      <Folder Include="Views\" />
     </ItemGroup>
 
     <ItemGroup>
       <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0-preview3.23201.1" />
       <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="8.0.0-rc.1.23419.6" />
       <PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" Version="2.1.6" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Assets\Images\add.png" />
+      <Content Include="Assets\Images\add.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\Images\minimize.png" />
+      <Content Include="Assets\Images\minimize.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\Images\remove.png" />
+      <Content Include="Assets\Images\remove.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\Images\WindowBG.jpg" />
     </ItemGroup>
 
 </Project>
