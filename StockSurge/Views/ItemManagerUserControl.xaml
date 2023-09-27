@@ -3,12 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:StockSurge.Views"
              mc:Ignorable="d"
-             d:DesignHeight="1080" 
+             d:DesignHeight="1080"
              d:DesignWidth="900">
-    
-    
+
+
     <UserControl.Triggers>
         <EventTrigger RoutedEvent="Window.Loaded">
             <BeginStoryboard>
@@ -21,24 +20,24 @@
             </BeginStoryboard>
         </EventTrigger>
     </UserControl.Triggers>
-    
+
     <!-- Window Wrapper -->
     <Border Style="{StaticResource WindowWrapperStyle}">
-        
+
         <!-- Window Wrapper Grid -->
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="Auto"></RowDefinition>
-                <RowDefinition Height="Auto"></RowDefinition>
-                <RowDefinition Height="Auto"></RowDefinition>
-                <RowDefinition></RowDefinition>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
             </Grid.RowDefinitions>
-            
+
             <!-- Title Bar Wrapper -->
             <Border Grid.Row="0" Grid.Column="0"
                     Style="{StaticResource TitleBarWrapperStyle}">
-                
+
                 <!-- Title Bar Wrapper Grid -->
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -46,77 +45,94 @@
                         <ColumnDefinition Width="50" />
                         <ColumnDefinition Width="50" />
                     </Grid.ColumnDefinitions>
-                    
+
                     <!-- Minimize Button -->
                     <Button Grid.Column="1" Grid.Row="0"
                             Style="{StaticResource TitleBarButtonStyle}" />
-                    
+
                     <!-- Close Button -->
                     <Button Grid.Column="2" Grid.Row="0"
                             Style="{StaticResource TitleBarButtonStyle}" />
                 </Grid>
             </Border>
-            
+
             <!-- Add and Remove Item Wrapper -->
             <Border Grid.Row="1" Grid.Column="0"
-                    Margin="100 50"
-                    Padding="50"
-                    CornerRadius="20"
                     Style="{StaticResource ActionWrapper}">
-                
+
+                <!-- Add and Remove Item Wrapper Grid -->
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition />
                         <RowDefinition />
                         <RowDefinition />
                     </Grid.RowDefinitions>
-                    
+
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
                     </Grid.ColumnDefinitions>
-                    
+
+                    <!-- TextBlocks Grid -->
                     <Grid Grid.Row="0" Grid.Column="0"
                           HorizontalAlignment="Center">
                         <Grid.RowDefinitions>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
                         </Grid.RowDefinitions>
-                        
-                        <TextBlock Grid.Row="0" Grid.Column="0" 
-                                   Text="Stock Code"
-                                   VerticalAlignment="Center" />
-                        <TextBlock Grid.Row="1" Grid.Column="0" 
-                                   Text="Stock Name"
-                                   VerticalAlignment="Center" />
-                        <TextBlock Grid.Row="2" Grid.Column="0"
-                                   Text="Quantity in Stock"
-                                   VerticalAlignment="Center" />
+
+                        <Border Grid.Row="0" Grid.Column="0"
+                                CornerRadius="0"
+                                Background="#0F0F0F">
+                            <TextBlock Text="Stock Code"
+                                       Style="{StaticResource PropertyTextStyle}" />
+                        </Border>
+
+                        <Border Grid.Row="1" Grid.Column="0"
+                                CornerRadius="0"
+                                Background="#0F0F0F">
+                            <TextBlock Text="Stock Name"
+                                       Style="{StaticResource PropertyTextStyle}" />
+                        </Border>
+
+                        <Border Grid.Row="2" Grid.Column="0"
+                                CornerRadius="0"
+                                Background="#0F0F0F">
+                            <TextBlock Text="Quantity in Stock"
+                                       Style="{StaticResource PropertyTextStyle}" />
+                        </Border>
                     </Grid>
-                    
+
+                    <!-- TextBoxes Grid -->
                     <Grid Grid.Row="0" Grid.Column="1">
                         <Grid.RowDefinitions>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
                         </Grid.RowDefinitions>
-                        
-                        <TextBox Grid.Row="0" Grid.Column="0" 
-                                 Text="{Binding CodeToAddItem}" 
-                                 Style="{StaticResource EnabledTextBoxStyle}" />
+
+                        <TextBox Grid.Row="0" Grid.Column="0"
+                                 Text="{Binding CodeToAddAndRemoveItem}"
+                                 Style="{StaticResource EnabledTextBoxStyle}" 
+                                 TextChanged="CodeToAddAndRemoveItemTextBoxChanged"/>
+
                         <TextBox Grid.Row="1" Grid.Column="0"
-                                    Text="{Binding NameToAddItem}"
-                                    Style="{StaticResource EnabledTextBoxStyle}" />
+                                 Text="{Binding NameToAddAndRemoveItem}"
+                                 Style="{StaticResource EnabledTextBoxStyle}" />
+
                         <TextBox Grid.Row="2" Grid.Column="0"
-                                    Text="{Binding QuantityInStockToAddItem}"
-                                    Style="{StaticResource EnabledTextBoxStyle}" />
+                                 Text="{Binding QuantityInStockToAddAndRemoveItem}"
+                                 Style="{StaticResource EnabledTextBoxStyle}" />
                     </Grid>
-                    
+
+                    <!-- Add and Remove Item Status TextBlock -->
                     <TextBlock Grid.Row="1" Grid.Column="0"
                                Grid.ColumnSpan="2"
-                               Text="{Binding AddItemStatus}"></TextBlock>
-                    
+                               Text="{Binding AddAndRemoveItemStatus}"
+                               Style="{StaticResource StatusTextStyle}" />
+
+                    <!-- Add and Remove Item Buttons Grid -->
                     <Grid Grid.Row="2" Grid.Column="0"
                           Grid.ColumnSpan="2"
                           HorizontalAlignment="Center">
@@ -124,22 +140,148 @@
                             <ColumnDefinition />
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
-                        
+
+                        <!-- Add Item Button -->
                         <Button Grid.Row="0" Grid.Column="0"
                                 Command="{Binding AddItemCommand}"
-                                Content="Item"
-                                Style="{StaticResource ActionButtonStyle}"></Button>
-                        
+                                Style="{StaticResource ActionButtonStyle}">
+                            <StackPanel Orientation="Vertical">
+                                <Image Source="/Assets/Images/add.png"
+                                       Width="25"
+                                       RenderOptions.BitmapScalingMode="HighQuality" />
+                                <TextBlock Text="ITEM"
+                                           Style="{StaticResource ActionButtonTextStyle}" />
+                            </StackPanel>
+                        </Button>
+
+                        <!-- Remove Item Button -->
                         <Button Grid.Row="0" Grid.Column="1"
-                                Command="{Binding AddItemCommand}"
-                                Content="Item"
-                                Style="{StaticResource ActionButtonStyle}"></Button>
+                                Command="{Binding RemoveItemCommand}"
+                                Style="{StaticResource ActionButtonStyle}">
+                            <StackPanel Orientation="Vertical">
+                                <Image Source="/Assets/Images/remove.png"
+                                       Width="25"
+                                       RenderOptions.BitmapScalingMode="HighQuality" />
+                                <TextBlock Text="ITEM"
+                                           Style="{StaticResource ActionButtonTextStyle}" />
+                            </StackPanel>
+                        </Button>
                     </Grid>
                 </Grid>
             </Border>
-            
-            <!-- Update Item Quantity Wrapper -->
-            
+
+            <!-- Update Quantity Wrapper -->
+            <Border Grid.Row="2" Grid.Column="0"
+                    Margin="100 0"
+                    Style="{StaticResource ActionWrapper}">
+
+                <!-- Update Quantity Wrapper Grid -->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- TextBlocks Grid -->
+                    <Grid Grid.Row="0" Grid.Column="0"
+                          HorizontalAlignment="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <Border Grid.Row="0" Grid.Column="0"
+                                CornerRadius="0"
+                                Background="#0F0F0F">
+                            <TextBlock Text="Stock Code"
+                                       Style="{StaticResource PropertyTextStyle}" />
+                        </Border>
+
+                        <Border Grid.Row="1" Grid.Column="0"
+                                CornerRadius="0"
+                                Background="#0F0F0F">
+                            <TextBlock Text="Quantity"
+                                       Style="{StaticResource PropertyTextStyle}" />
+                        </Border>
+                    </Grid>
+
+                    <!-- TextBoxes Grid -->
+                    <Grid Grid.Row="0" Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <TextBox Grid.Row="0" Grid.Column="0"
+                                 Text="{Binding CodeToUpdateQuantity}"
+                                 Style="{StaticResource EnabledTextBoxStyle}" />
+                        <TextBox Grid.Row="1" Grid.Column="0"
+                                 Text="{Binding ChangedQuantityToUpdateQuantity}"
+                                 Style="{StaticResource EnabledTextBoxStyle}" />
+                    </Grid>
+
+                    <!-- Update Quantity Status TextBlock -->
+                    <TextBlock Grid.Row="1" Grid.Column="0"
+                               Grid.ColumnSpan="2"
+                               Text="{Binding UpdateQuantityStatus}"
+                               Style="{StaticResource StatusTextStyle}" />
+
+                    <!-- Update Quantity Buttons -->
+                    <Grid Grid.Row="2" Grid.Column="0"
+                          Grid.ColumnSpan="2"
+                          HorizontalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Add Quantity Button -->
+                        <Button Grid.Row="0" Grid.Column="0"
+                                Command="{Binding AddQuantityCommand}"
+                                Style="{StaticResource ActionButtonStyle}">
+                            <StackPanel Orientation="Vertical">
+                                <Image Source="/Assets/Images/add.png"
+                                       Width="25"
+                                       RenderOptions.BitmapScalingMode="HighQuality" />
+                                <TextBlock Text="QUANTITY"
+                                           Style="{StaticResource ActionButtonTextStyle}" />
+                            </StackPanel>
+                        </Button>
+
+                        <!-- Remove Quantity Button -->
+                        <Button Grid.Row="0" Grid.Column="1"
+                                Command="{Binding RemoveQuantityCommand}"
+                                Style="{StaticResource ActionButtonStyle}">
+                            <StackPanel Orientation="Vertical">
+                                <Image Source="/Assets/Images/remove.png"
+                                       Width="25"
+                                       RenderOptions.BitmapScalingMode="HighQuality" />
+                                <TextBlock Text="QUANTITY"
+                                           Style="{StaticResource ActionButtonTextStyle}" />
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </Grid>
+            </Border>
+
+            <!-- Home Button -->
+            <Button Grid.Row="3" Grid.Column="0"
+                    Command="{Binding GoHomeCommand}"
+                    Style="{StaticResource ActionButtonStyle}">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="/Assets/Images/home.png"
+                           Width="25"
+                           RenderOptions.BitmapScalingMode="HighQuality" />
+                    <TextBlock Text="QUANTITY"
+                               Style="{StaticResource ActionButtonTextStyle}" />
+                </StackPanel>
+            </Button>
         </Grid>
     </Border>
 </UserControl>

@@ -7,14 +7,14 @@ public class StockItemModel {
     private readonly string _name;
     private int _quantityInStock;
     
-    // constructor method
+    // constructor
     public StockItemModel(string code, string name, int quantityInStock) {
         _code = code;
         _name = name;
         _quantityInStock = quantityInStock;
     }
     
-    // get methods
+    // getters
     public string GetCode() {
         return _code;
     }
@@ -27,7 +27,7 @@ public class StockItemModel {
         return _quantityInStock;
     }
     
-    // set methods
+    // setters
     public void SetQuantityInStock(int newQuantityInStock) {
         _quantityInStock = newQuantityInStock;
     }

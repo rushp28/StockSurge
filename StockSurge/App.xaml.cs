@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using StockSurge.ViewModels;
 
 namespace StockSurge {
     /// <summary>
@@ -13,8 +14,10 @@ namespace StockSurge {
     public partial class App : Application {
         
         protected override void OnStartup(StartupEventArgs e) {
-            MainWindow homeWindow = new MainWindow();
-            homeWindow.Show();
+            MainWindow mainWindow = new MainWindow {
+                DataContext = new MainViewModel()
+            };
+            mainWindow.Show();
 
             base.OnStartup(e);
         }

@@ -24,6 +24,10 @@
         
         <!-- Action Wrapper Style -->
         <Style x:Key="ActionWrapper" TargetType="Border">
+            <Setter Property="Margin"
+                    Value="100 50" />
+            <Setter Property="Padding"
+                    Value="50" />
             <Setter Property="CornerRadius"
                     Value="20" />
             <Setter Property="Background">
@@ -65,7 +69,7 @@
             <Setter Property="Margin"
                     Value="10 0" />
             <Setter Property="Background"
-                    Value="Black" />
+                    Value="#010101" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
@@ -108,7 +112,8 @@
             </Setter>
         </Style>
         
-                <Style x:Key="BaseButtonStyle"
+        
+        <Style x:Key="BaseButtonStyle"
                TargetType="Button">
             <Setter Property="FontFamily"
                     Value="Bahnschrift" />
@@ -155,38 +160,27 @@
             </Setter>
         </Style>
         
-        <Style x:Key="BackButtonStyle"
-               TargetType="Button"
-               BasedOn="{StaticResource BaseButtonStyle}">
-            <Setter Property="Height"
-                    Value="50" />
-            <Setter Property="Width"
-                    Value="100" />
-            <Setter Property="Foreground"
-                    Value="#161616" />
-            <Setter Property="FontSize"
-                    Value="13" />
-        </Style>
-        
-        <Style x:Key="ActionButtonStyle"
-               TargetType="Button"
+        <Style x:Key="ActionButtonStyle" TargetType="Button"
                BasedOn="{StaticResource BaseButtonStyle}">
             <Setter Property="Height"
                     Value="80" />
             <Setter Property="Width"
                     Value="100" />
             <Setter Property="Margin" 
-                    Value="0 10 0 0"/>
+                    Value="10 10 0 0"/>
+            <Setter Property="FontSize"
+                    Value="10" />
             <Setter Property="Background">
                 <Setter.Value>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                        <GradientStop Color="#00C9A7" Offset="0.1" />
-                        <GradientStop Color="#8685EF" Offset="1" />
+                    <LinearGradientBrush StartPoint="0,0" 
+                                         EndPoint="1,1">
+                        <GradientStop Color="#00C9A7" 
+                                      Offset="0.1" />
+                        <GradientStop Color="#8685EF"
+                                      Offset="1" />
                     </LinearGradientBrush>
                 </Setter.Value>
             </Setter>
-            <Setter Property="FontSize"
-                    Value="13" />
         </Style>
         
         <Style x:Key="EnabledTextBoxStyle"
@@ -196,15 +190,13 @@
             <Setter Property="Height"
                     Value="40" />
             <Setter Property="Margin"
-                    Value="0 5 0 5" />
+                    Value="0 5" />
             <Setter Property="Padding"
                     Value="10" />
-            <Setter Property="HorizontalAlignment"
-                    Value="Center" />
             <Setter Property="TextAlignment"
                     Value="Left" />
             <Setter Property="Background"
-                    Value="#161616" />
+                    Value="#0F0F0F" />
             <Setter Property="Foreground"
                     Value="#EEEEEE" />
             <Setter Property="FontFamily"
@@ -234,5 +226,57 @@
             </Setter>
         </Style>
         
+        <!-- Action Button Text Style -->
+        <Style x:Key="ActionButtonTextStyle" TargetType="TextBlock">
+            <Setter Property="VerticalAlignment"
+                    Value="Center" />
+            <Setter Property="FontFamily"
+                    Value="Bahnschrift" />
+            <Setter Property="Margin"
+                    Value="0 5" />
+            <Setter Property="Foreground"
+                    Value="#161616" />
+            <Setter Property="FontSize"
+                    Value="12" />
+        </Style>
+        
+        <!-- Property Text Style -->
+        <Style x:Key="PropertyTextStyle"
+               TargetType="TextBlock">
+            <Setter Property="VerticalAlignment"
+                    Value="Center" />
+            <Setter Property="HorizontalAlignment"
+                    Value="Left" />
+            <Setter Property="Width"
+                    Value="150"/>
+            <Setter Property="Margin"
+                    Value="100 5 0 5"/>
+            <Setter Property="Padding"
+                    Value="10"/>
+            <Setter Property="Foreground" 
+                    Value="#FFFFFF"/>
+            <Setter Property="FontFamily"
+                    Value="Bahnschrift" />
+            <Setter Property="FontSize"
+                    Value="12" />
+        </Style>
+        
+        <!-- Status Text Style -->
+        <Style x:Key="StatusTextStyle"
+               TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment"
+                    Value="Center" />
+            <Setter Property="Margin"
+                    Value="0 10 0 5"/>
+            <Setter Property="FontFamily"
+                    Value="Bahnschrift" />
+            <Setter Property="Foreground"
+                    Value="#8685EF" />
+            <Setter Property="FontSize"
+                    Value="14" />
+            <Setter Property="TextWrapping"
+                    Value="Wrap" />
+        </Style>
+
     </Application.Resources>
 </Application>

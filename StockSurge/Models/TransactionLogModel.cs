@@ -10,7 +10,7 @@ public class TransactionLogModel {
     private readonly int _changedQuantity;
     private readonly int _newQuantityInStock;
     
-    // constructor method
+    // constructor
     public TransactionLogModel(string logDateTime, string transactionType, StockItemModel stockItem, int changedQuantity, int newQuantityInStock) {
         _logDateTime = logDateTime;
         _transactionType = transactionType;
@@ -20,7 +20,7 @@ public class TransactionLogModel {
         _newQuantityInStock = newQuantityInStock;
     }
     
-    // get methods
+    // getters
     public string GetLogDateTime() {
         return _logDateTime;
     }

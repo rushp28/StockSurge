@@ -16,6 +16,6 @@
         WindowStartupLocation="CenterScreen">
     
     <Grid>
-        <views:ItemManagerUserControl/>
+        <views:ItemManagerUserControl DataContext="{Binding CurrentViewModel}"/>
     </Grid>
 </Window>

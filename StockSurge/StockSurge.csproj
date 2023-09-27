@@ -8,11 +8,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Commands\" />
-      <Folder Include="ViewModels\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0-preview3.23201.1" />
       <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="8.0.0-rc.1.23419.6" />
       <PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" Version="2.1.6" />
@@ -32,6 +27,10 @@
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
       <None Remove="Assets\Images\WindowBG.jpg" />
+      <None Remove="Assets\Images\home.png" />
+      <Content Include="Assets\Images\home.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
 </Project>
