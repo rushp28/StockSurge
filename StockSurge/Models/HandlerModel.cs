@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace StockSurge.Models; 
 
@@ -66,21 +67,44 @@ public static class HandlerModel {
     }
     
     // remove quantity to stock item's quantity in stock method
-    public static bool RemoveStockItemQuantity(string code, int quantityToRemove) {
+    public static string RemoveStockItemQuantity(string code, int quantityToRemove) {
         
         StockItemModel? stockItem = DatabaseHandlerModel.GetStockItemByCode(code);
         
         if (stockItem != null) {
+
+            if (stockItem.GetQuantityInStock() < quantityToRemove) {
+                return "Insufficient";
+            }
+            else {
+                int newQuantityInStock = stockItem.GetQuantityInStock() - quantityToRemove;
+                stockItem.SetQuantityInStock(newQuantityInStock);
             
-            int newQuantityInStock = stockItem.GetQuantityInStock() - quantityToRemove;
-            stockItem.SetQuantityInStock(newQuantityInStock);
+                DatabaseHandlerModel.UpdateStockItemQuantity(stockItem);
+                AddTransactionLog("Quantity Removed", stockItem, quantityToRemove, newQuantityInStock);
             
-            DatabaseHandlerModel.UpdateStockItemQuantity(stockItem);
-            AddTransactionLog("Quantity Removed", stockItem, quantityToRemove, newQuantityInStock);
-            
-            return true;
+                return "Yes";
+            }
         }
         
-        return false;
+        return "No";
+    }
+    
+    // get all stock items method
+    public static List<StockItemModel>? GetAllStockItems() {
+        
+        return DatabaseHandlerModel.GetAllStockItems();
+    }
+    
+    // get all transaction logs method
+    public static List<TransactionLogModel>? GetAllTransactionLogs() {
+        
+        return DatabaseHandlerModel.GetAllTransactionLogs();
+    }
+    
+    // get stock item by code method
+    public static StockItemModel? GetStockItemByCode(string code) {
+        
+        return DatabaseHandlerModel.GetStockItemByCode(code);
     }
 }

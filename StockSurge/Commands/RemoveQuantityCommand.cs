@@ -13,16 +13,24 @@ public class RemoveQuantityCommand : BaseCommand {
     
     public override void Execute(object parameter) {
         if (_itemManagerViewModel.AreValidInputsToUpdateQuantity) {
-            bool isQuantityAdded =  HandlerModel.RemoveStockItemQuantity(_itemManagerViewModel.CodeToUpdateQuantity, _itemManagerViewModel.ChangedQuantityToUpdateQuantity);
-            
-            if (isQuantityAdded) {
-                _itemManagerViewModel.UpdateQuantityStatus = $"Quantity of Stock Item with Code \" {_itemManagerViewModel.CodeToUpdateQuantity} \" decreased by {_itemManagerViewModel.ChangedQuantityToUpdateQuantity}!";
+            string isQuantityRemoved =  HandlerModel.RemoveStockItemQuantity(_itemManagerViewModel.CodeToUpdateQuantity, _itemManagerViewModel.ChangedQuantityToUpdateQuantity);
+
+            switch (isQuantityRemoved) {
+                case "Yes":
+                    _itemManagerViewModel.UpdateQuantityStatus = $"Quantity of Stock Item with Code \" {_itemManagerViewModel.CodeToUpdateQuantity} \" decreased by {_itemManagerViewModel.ChangedQuantityToUpdateQuantity}!";
                 
-                _itemManagerViewModel.CodeToUpdateQuantity = string.Empty;
-                _itemManagerViewModel.ChangedQuantityToUpdateQuantity = 0;
-            }
-            else {
-                _itemManagerViewModel.UpdateQuantityStatus = $"Stock Item with Code \" {_itemManagerViewModel.CodeToUpdateQuantity} \" does not exist!";
+                    _itemManagerViewModel.CodeToUpdateQuantity = string.Empty;
+                    _itemManagerViewModel.ChangedQuantityToUpdateQuantity = 0;
+                    
+                    break;
+                case "Insufficient":
+                    _itemManagerViewModel.UpdateQuantityStatus = $"Stock Item with Code \" {_itemManagerViewModel.CodeToUpdateQuantity} \" does not have sufficient quantity!";
+                    
+                    break;
+                default:
+                    _itemManagerViewModel.UpdateQuantityStatus = $"Stock Item with Code \" {_itemManagerViewModel.CodeToUpdateQuantity} \" does not exist!";
+                    
+                    break;
             }
         }
         else {

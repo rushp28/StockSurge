@@ -4,8 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d"
-             d:DesignHeight="1080"
-             d:DesignWidth="900">
+             d:DesignHeight="900"
+             d:DesignWidth="1080">
 
 
     <UserControl.Triggers>
@@ -13,7 +13,7 @@
             <BeginStoryboard>
                 <Storyboard>
                     <DoubleAnimation Storyboard.TargetProperty="Opacity"
-                                     From="0.5"
+                                     From="0.9"
                                      To="1"
                                      Duration="0:0:0.5" />
                 </Storyboard>
@@ -83,21 +83,21 @@
                         </Grid.RowDefinitions>
 
                         <Border Grid.Row="0" Grid.Column="0"
-                                CornerRadius="0"
+                                CornerRadius="20"
                                 Background="#0F0F0F">
                             <TextBlock Text="Stock Code"
                                        Style="{StaticResource PropertyTextStyle}" />
                         </Border>
 
                         <Border Grid.Row="1" Grid.Column="0"
-                                CornerRadius="0"
+                                CornerRadius="20"
                                 Background="#0F0F0F">
                             <TextBlock Text="Stock Name"
                                        Style="{StaticResource PropertyTextStyle}" />
                         </Border>
 
                         <Border Grid.Row="2" Grid.Column="0"
-                                CornerRadius="0"
+                                CornerRadius="20"
                                 Background="#0F0F0F">
                             <TextBlock Text="Quantity in Stock"
                                        Style="{StaticResource PropertyTextStyle}" />
@@ -197,14 +197,14 @@
                         </Grid.RowDefinitions>
 
                         <Border Grid.Row="0" Grid.Column="0"
-                                CornerRadius="0"
+                                CornerRadius="20"
                                 Background="#0F0F0F">
                             <TextBlock Text="Stock Code"
                                        Style="{StaticResource PropertyTextStyle}" />
                         </Border>
 
                         <Border Grid.Row="1" Grid.Column="0"
-                                CornerRadius="0"
+                                CornerRadius="20"
                                 Background="#0F0F0F">
                             <TextBlock Text="Quantity"
                                        Style="{StaticResource PropertyTextStyle}" />
@@ -272,14 +272,13 @@
 
             <!-- Home Button -->
             <Button Grid.Row="3" Grid.Column="0"
-                    Command="{Binding GoHomeCommand}"
-                    Style="{StaticResource ActionButtonStyle}">
+                    Command="{Binding NavigateToHomeCommand}"
+                    Style="{StaticResource ActionButtonStyle}"
+                    Height="50">
                 <StackPanel Orientation="Vertical">
                     <Image Source="/Assets/Images/home.png"
-                           Width="25"
+                           Width="15"
                            RenderOptions.BitmapScalingMode="HighQuality" />
-                    <TextBlock Text="QUANTITY"
-                               Style="{StaticResource ActionButtonTextStyle}" />
                 </StackPanel>
             </Button>
         </Grid>

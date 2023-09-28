@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StockSurge"
         xmlns:views="clr-namespace:StockSurge.Views"
+        xmlns:vms="clr-namespace:StockSurge.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow" 
         Height="900" 
@@ -16,6 +17,20 @@
         WindowStartupLocation="CenterScreen">
     
     <Grid>
-        <views:ItemManagerUserControl DataContext="{Binding CurrentViewModel}"/>
+        <Grid.Resources>
+            <DataTemplate DataType="{x:Type vms:HomeViewModel}">
+                <views:HomeUserControl />
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type vms:ItemManagerViewModel}">
+                <views:ItemManagerUserControl />
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type vms:TransactionLogListViewModel}">
+                <views:TransactionLogListUserControl />
+            </DataTemplate>
+        </Grid.Resources>
+        
+        <ContentControl Content="{Binding CurrentViewModel}"/>
     </Grid>
 </Window>

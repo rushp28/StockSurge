@@ -25,7 +25,7 @@
         <!-- Action Wrapper Style -->
         <Style x:Key="ActionWrapper" TargetType="Border">
             <Setter Property="Margin"
-                    Value="100 50" />
+                    Value="100 25" />
             <Setter Property="Padding"
                     Value="50" />
             <Setter Property="CornerRadius"
@@ -267,7 +267,7 @@
             <Setter Property="HorizontalAlignment"
                     Value="Center" />
             <Setter Property="Margin"
-                    Value="0 10 0 5"/>
+                    Value="0 33 0 5"/>
             <Setter Property="FontFamily"
                     Value="Bahnschrift" />
             <Setter Property="Foreground"
@@ -276,6 +276,73 @@
                     Value="14" />
             <Setter Property="TextWrapping"
                     Value="Wrap" />
+        </Style>
+        
+        <Style x:Key="DataGridColumnHeaderStyle"
+               TargetType="DataGridColumnHeader">
+            <Setter Property="HorizontalAlignment"
+                    Value="Center" />
+            <Setter Property="Height" 
+                    Value="50" />
+            <Setter Property="Padding" 
+                    Value="10" />
+            <Setter Property="Foreground"
+                    Value="#FFFFFF" />
+            <Setter Property="Background" 
+                    Value="#8685EF" />
+            <Setter Property="BorderBrush"
+                    Value="Transparent"/>
+            <Setter Property="FontWeight"
+                    Value="Thin" />
+            <Setter Property="FontSize"
+                    Value="14" />
+        </Style>
+        
+        <Style x:Key="DataGridCellStyle"
+               TargetType="DataGridCell">
+            <Setter Property="Foreground" 
+                    Value="#F5F5F5" />
+            <Setter Property="Background" 
+                    Value="#1F1F1F" />
+            <Setter Property="Padding" 
+                    Value="5" />
+            <Setter Property="BorderBrush"
+                    Value="#8685EF"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="DataGridCell">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                Padding="{TemplateBinding Padding}"
+                                Margin="{TemplateBinding Margin}"
+                                BorderThickness="1">
+                            <ContentPresenter />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <Style x:Key="DataGridStyle"
+               TargetType="DataGrid">
+            <Setter Property="AutoGenerateColumns"
+                    Value="False" />
+            <Setter Property="HeadersVisibility"
+                    Value="Column" />
+            <Setter Property="IsReadOnly"
+                    Value="True" />
+            <Setter Property="HorizontalAlignment"
+                    Value="Center" />
+            <Setter Property="Height"
+                    Value="Auto" />
+            <Setter Property="Width"
+                    Value="Auto" />
+            <Setter Property="MaxHeight"
+                    Value="595" />
+            <Setter Property="BorderThickness"
+                    Value="0" />
+            <Setter Property="FontFamily"
+                    Value="Bahnschrift" />
         </Style>
 
     </Application.Resources>

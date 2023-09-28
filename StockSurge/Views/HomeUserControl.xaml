@@ -1,0 +1,116 @@
+﻿<UserControl x:Class="StockSurge.Views.HomeUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:StockSurge.Views"
+             mc:Ignorable="d"
+             d:DesignHeight="900"
+             d:DesignWidth="1080">
+    
+    
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                     From="0.9"
+                                     To="1"
+                                     Duration="0:0:0.5" />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </UserControl.Triggers>
+    
+        <!-- Window Wrapper -->
+    <Border Style="{StaticResource WindowWrapperStyle}">
+
+        <!-- Window Wrapper Grid -->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!-- Title Bar Wrapper -->
+            <Border Grid.Row="0" Grid.Column="0"
+                    Style="{StaticResource TitleBarWrapperStyle}">
+
+                <!-- Title Bar Wrapper Grid -->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="50" />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Minimize Button -->
+                    <Button Grid.Column="1" Grid.Row="0"
+                            Style="{StaticResource TitleBarButtonStyle}" />
+
+                    <!-- Close Button -->
+                    <Button Grid.Column="2" Grid.Row="0"
+                            Style="{StaticResource TitleBarButtonStyle}" />
+                </Grid>
+            </Border>
+
+            <!-- Navigation Buttons Wrapper -->
+            <Border Grid.Row="1" Grid.Column="0"
+                    Style="{StaticResource ActionWrapper}">
+
+                <!-- Navigation Buttons Wrapper Grid -->
+                <Grid>
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center">
+                        
+                        <!-- Item Manager Button -->
+                        <Button Command="{Binding NavigateToItemManagerCommand}"
+                                Style="{StaticResource ActionButtonStyle}"
+                                Height="150"
+                                Width="120"
+                                Margin="50 5"
+                                Padding="10">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="ITEM MANAGER"
+                                           Style="{StaticResource ActionButtonTextStyle}"
+                                           TextWrapping="Wrap"
+                                           TextAlignment="Center"
+                                           Padding="10"/>
+                            </StackPanel>
+                        </Button>
+                        
+                        <!-- Transaction Logs List Button -->
+                        <Button Command="{Binding NavigateToTransactionListCommand}"
+                                Style="{StaticResource ActionButtonStyle}"
+                                Height="150"
+                                Width="120"
+                                Margin="50 5">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="TRANSACTION LOGS LIST"
+                                           Style="{StaticResource ActionButtonTextStyle}"
+                                           TextWrapping="Wrap"
+                                           TextAlignment="Center"
+                                           Padding="10"/>
+                            </StackPanel>
+                        </Button>
+                        
+                        <!-- Stock List Button -->
+                        <Button Command="{Binding NavigateToStockListCommand}"
+                                Style="{StaticResource ActionButtonStyle}"
+                                Height="150"
+                                Width="120"
+                                Margin="50 5">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="STOCK LIST"
+                                           Style="{StaticResource ActionButtonTextStyle}"
+                                           TextWrapping="Wrap"
+                                           TextAlignment="Center"
+                                           Padding="10"/>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+</UserControl>

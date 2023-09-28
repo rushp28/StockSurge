@@ -175,12 +175,12 @@ public static class DatabaseHandlerModel {
 
         try {
             while (sqliteDataReader.Read()) {
-                string logDateTime = sqliteDataReader.GetString(0);
-                string transactionType = sqliteDataReader.GetString(1);
-                string stockItemCode = sqliteDataReader.GetString(2);
-                string stockItemName = sqliteDataReader.GetString(3);
-                int changedQuantity = sqliteDataReader.GetInt32(4);
-                int newQuantityInStock = sqliteDataReader.GetInt32(5);
+                string logDateTime = sqliteDataReader.GetString(1);
+                string transactionType = sqliteDataReader.GetString(2);
+                string stockItemCode = sqliteDataReader.GetString(3);
+                string stockItemName = sqliteDataReader.GetString(4);
+                int changedQuantity = sqliteDataReader.GetInt32(5);
+                int newQuantityInStock = sqliteDataReader.GetInt32(6);
                 
                 StockItemModel stockItem = new StockItemModel(stockItemCode, stockItemName, newQuantityInStock);
 

@@ -1,8 +1,10 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Input;
 using StockSurge.Commands;
 using StockSurge.Models;
+using StockSurge.Stores;
 
 namespace StockSurge.ViewModels; 
 
@@ -29,7 +31,7 @@ public class ItemManagerViewModel : BaseViewModel {
             else {
                 _codeToAddAndRemoveItem = value;
 
-                StockItemModel stockItem = DatabaseHandlerModel.GetStockItemByCode(value);
+                StockItemModel stockItem = HandlerModel.GetStockItemByCode(value);
                 if (stockItem != null) {
                     NameToAddAndRemoveItem = stockItem.GetName();
                     QuantityInStockToAddAndRemoveItem = stockItem.GetQuantityInStock();
@@ -127,7 +129,7 @@ public class ItemManagerViewModel : BaseViewModel {
         
         string currentCode = ((TextBox)sender).Text;
         
-        StockItemModel stockItem = DatabaseHandlerModel.GetStockItemByCode(currentCode);
+        StockItemModel stockItem = HandlerModel.GetStockItemByCode(currentCode);
         
         if (stockItem != null) {
             NameToAddAndRemoveItem = stockItem.GetName();
@@ -136,11 +138,13 @@ public class ItemManagerViewModel : BaseViewModel {
     }
 
     // constructor
-    public ItemManagerViewModel() {
+    public ItemManagerViewModel(NavigationStore navigationStore, Func<HomeViewModel> createHomeViewModel) {
         
         AddItemCommand = new AddItemCommand(this);
         RemoveItemCommand = new RemoveItemCommand(this);
         AddQuantityCommand = new AddQuantityCommand(this);
         RemoveQuantityCommand = new RemoveQuantityCommand(this);
+        
+        NavigateToHomeCommand = new NavigateCommand(navigationStore, createHomeViewModel);
     }
 }
