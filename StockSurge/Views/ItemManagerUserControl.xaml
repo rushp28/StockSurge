@@ -7,7 +7,6 @@
              d:DesignHeight="900"
              d:DesignWidth="1080">
 
-
     <UserControl.Triggers>
         <EventTrigger RoutedEvent="Window.Loaded">
             <BeginStoryboard>

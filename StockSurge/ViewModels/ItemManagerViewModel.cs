@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -110,12 +111,19 @@ public class ItemManagerViewModel : BaseViewModel {
         }
     }
     
+    // regex expressions
+    private const string AlphabetPattern = @"^[A-Za-z]+$";
+
     // null, empty and negative input checks
     public bool AreValidInputsToAddAndRemoveItem => 
-        !(string.IsNullOrEmpty(_codeToAddAndRemoveItem) || string.IsNullOrEmpty(_nameToAddAndRemoveItem) || _quantityInStockToAddAndRemoveItem < 0);
+        !string.IsNullOrWhiteSpace(_codeToAddAndRemoveItem) &&
+        !string.IsNullOrWhiteSpace(_nameToAddAndRemoveItem) &&
+        Regex.IsMatch(_nameToAddAndRemoveItem, AlphabetPattern) &&
+        int.TryParse(Convert.ToString(_quantityInStockToAddAndRemoveItem), out int quantity) && quantity > 0;
 
     public bool AreValidInputsToUpdateQuantity => 
-        !(string.IsNullOrEmpty(_codeToUpdateQuantity) || _changedQuantityToUpdateQuantity <= 0);
+        !string.IsNullOrWhiteSpace(_codeToUpdateQuantity) &&
+        int.TryParse(Convert.ToString(_changedQuantityToUpdateQuantity), out int quantity) && quantity > 0;
     
     // commands
     public ICommand AddItemCommand { get; }

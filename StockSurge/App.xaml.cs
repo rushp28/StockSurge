@@ -33,7 +33,7 @@ namespace StockSurge {
         }
 
         private HomeViewModel CreateHomeViewModel() {
-            return new HomeViewModel(_navigationStore, CreateItemManagerViewModel, CreateTransactionLogListViewModel);
+            return new HomeViewModel(_navigationStore, CreateItemManagerViewModel, CreateTransactionLogListViewModel, CreateStockListViewModel);
         }
 
         private ItemManagerViewModel CreateItemManagerViewModel() {
@@ -42,6 +42,10 @@ namespace StockSurge {
         
         private TransactionLogListViewModel CreateTransactionLogListViewModel() {
             return new TransactionLogListViewModel(_navigationStore, CreateHomeViewModel);
+        }
+
+        private StockListViewModel CreateStockListViewModel() {
+            return new StockListViewModel(_navigationStore, CreateHomeViewModel);
         }
     }
 }

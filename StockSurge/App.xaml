@@ -288,8 +288,14 @@
                     Value="10" />
             <Setter Property="Foreground"
                     Value="#FFFFFF" />
-            <Setter Property="Background" 
-                    Value="#8685EF" />
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#00C9A7" Offset="0.1" />
+                        <GradientStop Color="#8685EF" Offset="1" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
             <Setter Property="BorderBrush"
                     Value="Transparent"/>
             <Setter Property="FontWeight"
@@ -306,8 +312,14 @@
                     Value="#1F1F1F" />
             <Setter Property="Padding" 
                     Value="5" />
-            <Setter Property="BorderBrush"
-                    Value="#8685EF"/>
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#00C9A7" Offset="0.1" />
+                        <GradientStop Color="#8685EF" Offset="1" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="DataGridCell">
