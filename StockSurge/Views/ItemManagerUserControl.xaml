@@ -40,18 +40,24 @@
                 <!-- Title Bar Wrapper Grid -->
                 <Grid>
                     <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50" />
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="50" />
                         <ColumnDefinition Width="50" />
                     </Grid.ColumnDefinitions>
+                    
+                    <Image Grid.Column="0" Grid.Row="0"
+                           Source="/Assets/Images/logo.ico"
+                           Height="25" 
+                           RenderOptions.BitmapScalingMode="HighQuality" />
 
                     <!-- Minimize Button -->
-                    <Button Grid.Column="1" Grid.Row="0"
+                    <Button Grid.Column="2" Grid.Row="0"
                             Style="{StaticResource TitleBarButtonStyle}"
                             Click="MinimizeCommand"/>
 
                     <!-- Close Button -->
-                    <Button Grid.Column="2" Grid.Row="0"
+                    <Button Grid.Column="3" Grid.Row="0"
                             Style="{StaticResource TitleBarButtonStyle}"
                             Click="CloseButton"/>
                 </Grid>

@@ -19,12 +19,18 @@ public class LoginCommand : BaseCommand{
     }
     
     public override void Execute(object parameter) {
-        
-        if (HandlerModel.VerifyUser(_loginViewModel.Username, _loginViewModel .Password)) {
-            _navigateCommand.Execute(null);
+
+        if (_loginViewModel.AreValidInputsToLogin) {
+            if (HandlerModel.VerifyUser(_loginViewModel.Username, _loginViewModel .Password)) {
+                _navigateCommand.Execute(null);
+            }
+            else {
+                _loginViewModel.LoginStatus = "Incorrect Username or Password!";
+            }
         }
         else {
-            _loginViewModel.LoginStatus = "Incorrect Username or Password!";
+            _loginViewModel.LoginStatus = "Enter the Username or Password!";
         }
+ 
     }
 }

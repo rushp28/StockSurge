@@ -7,7 +7,7 @@
         xmlns:views="clr-namespace:StockSurge.Views"
         xmlns:vms="clr-namespace:StockSurge.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" 
+        Title="StockSurge" 
         Height="900" 
         Width="1080"
         WindowStyle="None"

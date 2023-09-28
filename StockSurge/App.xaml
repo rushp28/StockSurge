@@ -25,7 +25,7 @@
         <!-- Action Wrapper Style -->
         <Style x:Key="ActionWrapper" TargetType="Border">
             <Setter Property="Margin"
-                    Value="100 25" />
+                    Value="60 25" />
             <Setter Property="Padding"
                     Value="50" />
             <Setter Property="CornerRadius"
@@ -282,6 +282,8 @@
                TargetType="DataGridColumnHeader">
             <Setter Property="HorizontalAlignment"
                     Value="Center" />
+            <Setter Property="Width" 
+                    Value="140" />
             <Setter Property="Height" 
                     Value="50" />
             <Setter Property="Padding" 
@@ -306,6 +308,8 @@
         
         <Style x:Key="DataGridCellStyle"
                TargetType="DataGridCell">
+            <Setter Property="Width" 
+                    Value="140" />
             <Setter Property="Foreground" 
                     Value="#F5F5F5" />
             <Setter Property="Background" 

@@ -5,6 +5,7 @@
         <TargetFramework>net7.0-windows</TargetFramework>
         <Nullable>enable</Nullable>
         <UseWPF>true</UseWPF>
+        <ApplicationIcon>Assets\Images\logo.ico</ApplicationIcon>
     </PropertyGroup>
 
     <ItemGroup>
@@ -33,6 +34,10 @@
       </Content>
       <None Remove="Assets\Images\enter.png" />
       <Content Include="Assets\Images\enter.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\Images\logo.ico" />
+      <Content Include="Assets\Images\logo.ico">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
     </ItemGroup>

@@ -40,6 +40,11 @@ public class LoginViewModel : BaseViewModel {
         }
     }
     
+    // null, empty and negative input checks
+    public bool AreValidInputsToLogin => 
+        !string.IsNullOrWhiteSpace(_username) &&
+        !string.IsNullOrWhiteSpace(_password);
+
     // clear status after delay method
     private async void ClearStatusAfterDelay(string propertyName)
     {
