@@ -31,6 +31,35 @@ public static class DatabaseHandlerModel {
         // return a sqlite connection
         return new SqliteConnection(connectionString);
     }
+    
+    // verify user using sqlite database method
+    public static bool VerifyUser(UserModel user) {
+        
+        const string selectUserQuery = "SELECT * FROM users WHERE username = @username AND password = @password";
+
+        using SqliteConnection sqliteConnection = GetSqliteConnection();
+        sqliteConnection.Open();
+
+        using SqliteCommand sqliteCommand = new SqliteCommand(selectUserQuery, sqliteConnection);
+        sqliteCommand.Parameters.AddWithValue("@username", user.GetUsername());
+        sqliteCommand.Parameters.AddWithValue("@password", user.GetPassword());
+
+        using SqliteDataReader sqliteDataReader = sqliteCommand.ExecuteReader();
+        
+        try {
+            if (sqliteDataReader.Read()) {
+                return true;
+            }
+        }
+        catch (Exception e) {
+            Console.WriteLine($"Failed to verify user: {e.Message}");
+        }
+        finally {
+            sqliteConnection.Close();
+        }
+
+        return false;
+    }
 
     // insert a transaction log into sqlite database method
     public static void InsertTransactionLog(TransactionLogModel transactionLog) {

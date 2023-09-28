@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using StockSurge.Commands;
 using StockSurge.Stores;
 using StockSurge.ViewModels;
 
@@ -22,7 +23,7 @@ namespace StockSurge {
         
         protected override void OnStartup(StartupEventArgs e) {
 
-            _navigationStore.CurrentViewModel = CreateHomeViewModel();
+            _navigationStore.CurrentViewModel = CreateLoginViewModel();
             
             MainWindow mainWindow = new MainWindow {
                 DataContext = new MainViewModel(_navigationStore)
@@ -46,6 +47,10 @@ namespace StockSurge {
 
         private StockListViewModel CreateStockListViewModel() {
             return new StockListViewModel(_navigationStore, CreateHomeViewModel);
+        }
+
+        private LoginViewModel CreateLoginViewModel() {
+            return new LoginViewModel(_navigationStore, CreateHomeViewModel);
         }
     }
 }

@@ -33,6 +33,10 @@
             <DataTemplate DataType="{x:Type vms:StockListViewModel}">
                 <views:StockListUserControl />
             </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type vms:LoginViewModel}">
+                <views:LoginUserControl />
+            </DataTemplate>
         </Grid.Resources>
         
         <ContentControl Content="{Binding CurrentViewModel}"/>

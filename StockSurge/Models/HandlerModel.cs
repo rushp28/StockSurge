@@ -5,6 +5,19 @@ namespace StockSurge.Models;
 
 public static class HandlerModel {
     
+    // verify user method
+    public static bool VerifyUser(string username, string password) {
+
+        UserModel user = new UserModel(username, password);
+
+        if (DatabaseHandlerModel.VerifyUser(user)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    
     // add a transaction log method
     private static void AddTransactionLog(string transactionType, StockItemModel stockItem, int changedQuantity, int newQuantityInStock) {
         

@@ -31,6 +31,10 @@
       <Content Include="Assets\Images\home.png">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
+      <None Remove="Assets\Images\enter.png" />
+      <Content Include="Assets\Images\enter.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
 </Project>

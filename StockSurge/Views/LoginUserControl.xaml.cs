@@ -3,8 +3,9 @@ using System.Windows.Controls;
 
 namespace StockSurge.Views; 
 
-public partial class StockListUserControl : UserControl {
-    public StockListUserControl() {
+public partial class LoginUserControl : UserControl {
+    
+    public LoginUserControl() {
         InitializeComponent();
     }
     
