@@ -11,29 +11,19 @@ public partial class ItemManagerUserControl : UserControl {
     }
 
     private void CodeToAddAndRemoveItemTextBoxChanged(object sender, TextChangedEventArgs e) {
-        
-        ItemManagerViewModel itemManagerViewModel = (ItemManagerViewModel) DataContext;
+        var itemManagerViewModel = (ItemManagerViewModel)DataContext;
         try {
             itemManagerViewModel.UpdateNameAndQuantityInStockToAddAndRemoveItem(sender, e);
         }
         catch (Exception exception) {
-            return;
-        }
-    }
-    
-    private void MinimizeCommand(object sender, RoutedEventArgs e)
-    {
-        if (Application.Current.MainWindow is { } mainWindow)
-        {
-            mainWindow.WindowState = WindowState.Minimized;
         }
     }
 
-    private void CloseButton(object sender, RoutedEventArgs e)
-    {
-        if (Application.Current.MainWindow is { } mainWindow)
-        {
-            mainWindow.Close();
-        }
+    private void MinimizeCommand(object sender, RoutedEventArgs e) {
+        if (Application.Current.MainWindow is { } mainWindow) mainWindow.WindowState = WindowState.Minimized;
+    }
+
+    private void CloseButton(object sender, RoutedEventArgs e) {
+        if (Application.Current.MainWindow is { } mainWindow) mainWindow.Close();
     }
 }

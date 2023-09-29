@@ -271,7 +271,7 @@
             <Setter Property="FontFamily"
                     Value="Bahnschrift" />
             <Setter Property="Foreground"
-                    Value="#8685EF" />
+                    Value="red" />
             <Setter Property="FontSize"
                     Value="14" />
             <Setter Property="TextWrapping"

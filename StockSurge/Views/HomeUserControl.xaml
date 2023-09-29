@@ -3,11 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:StockSurge.Views"
              mc:Ignorable="d"
              d:DesignHeight="900"
              d:DesignWidth="1080">
-    
+
     <UserControl.Triggers>
         <EventTrigger RoutedEvent="Window.Loaded">
             <BeginStoryboard>
@@ -20,8 +19,8 @@
             </BeginStoryboard>
         </EventTrigger>
     </UserControl.Triggers>
-    
-        <!-- Window Wrapper -->
+
+    <!-- Window Wrapper -->
     <Border Style="{StaticResource WindowWrapperStyle}">
 
         <!-- Window Wrapper Grid -->
@@ -43,21 +42,21 @@
                         <ColumnDefinition Width="50" />
                         <ColumnDefinition Width="50" />
                     </Grid.ColumnDefinitions>
-                    
+
                     <Image Grid.Column="0" Grid.Row="0"
                            Source="/Assets/Images/logo.ico"
-                           Height="25" 
+                           Height="25"
                            RenderOptions.BitmapScalingMode="HighQuality" />
 
                     <!-- Minimize Button -->
                     <Button Grid.Column="2" Grid.Row="0"
                             Style="{StaticResource TitleBarButtonStyle}"
-                            Click="MinimizeCommand"/>
+                            Click="MinimizeCommand" />
 
                     <!-- Close Button -->
                     <Button Grid.Column="3" Grid.Row="0"
                             Style="{StaticResource TitleBarButtonStyle}"
-                            Click="CloseButton"/>
+                            Click="CloseButton" />
                 </Grid>
             </Border>
 
@@ -69,7 +68,7 @@
                 <Grid>
                     <StackPanel Orientation="Horizontal"
                                 HorizontalAlignment="Center">
-                        
+
                         <!-- Item Manager Button -->
                         <Button Command="{Binding NavigateToItemManagerCommand}"
                                 Style="{StaticResource ActionButtonStyle}"
@@ -82,10 +81,10 @@
                                            Style="{StaticResource ActionButtonTextStyle}"
                                            TextWrapping="Wrap"
                                            TextAlignment="Center"
-                                           Padding="10"/>
+                                           Padding="10" />
                             </StackPanel>
                         </Button>
-                        
+
                         <!-- Transaction Logs List Button -->
                         <Button Command="{Binding NavigateToTransactionListCommand}"
                                 Style="{StaticResource ActionButtonStyle}"
@@ -97,10 +96,10 @@
                                            Style="{StaticResource ActionButtonTextStyle}"
                                            TextWrapping="Wrap"
                                            TextAlignment="Center"
-                                           Padding="10"/>
+                                           Padding="10" />
                             </StackPanel>
                         </Button>
-                        
+
                         <!-- Stock List Button -->
                         <Button Command="{Binding NavigateToStockListCommand}"
                                 Style="{StaticResource ActionButtonStyle}"
@@ -112,7 +111,7 @@
                                            Style="{StaticResource ActionButtonTextStyle}"
                                            TextWrapping="Wrap"
                                            TextAlignment="Center"
-                                           Padding="10"/>
+                                           Padding="10" />
                             </StackPanel>
                         </Button>
                     </StackPanel>
