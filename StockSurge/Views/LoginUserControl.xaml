@@ -29,6 +29,7 @@
                 <RowDefinition Height="50" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
             <!-- Title Bar Wrapper -->
@@ -69,7 +70,6 @@
                 <!-- Login List Wrapper Grid -->
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition />
                         <RowDefinition />
                         <RowDefinition />
                     </Grid.RowDefinitions>
@@ -120,14 +120,13 @@
                                  Text="{Binding Password}"
                                  Style="{StaticResource EnabledTextBoxStyle}" />
                     </Grid>
-
-                    <!-- Login Status TextBlock -->
-                    <TextBlock Grid.Row="1" Grid.Column="0"
-                               Grid.ColumnSpan="2"
-                               Text="{Binding LoginStatus}"
-                               Style="{StaticResource StatusTextStyle}" />
                 </Grid>
             </Border>
+            
+            <!-- Login Status TextBlock -->
+            <TextBlock Grid.Row="2" Grid.Column="0"
+                       Text="{Binding LoginStatus}"
+                       Style="{StaticResource StatusTextStyle}" />
 
             <!-- Login Button -->
             <Button Grid.Row="3" Grid.Column="0"
