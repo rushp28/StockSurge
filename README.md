@@ -1,40 +1,43 @@
-# StockSurge
+# StockSurge 🚀
 
-Desktop CRUD App in C# with Admin Login and Stock/Transaction Viewing
-This is a desktop CRUD app in C# that allows users to login as an admin and view stocks and transactions. The app uses a database to store the data, and it uses Windows Forms to provide the user interface.
+## A Stock Management Adventure in C#!
 
-Installation
-To install the app, you will need the following:
+Welcome to StockSurge, where managing your stock has never been this exciting! StockSurge is a desktop CRUD (Create, Read, Update, Delete) application, crafted in the magical land of C#. It empowers you to step into the shoes of an admin and take control of your stock and transactions. All of this, with a sprinkle of SQLite3 magic and a dash of beautiful WPF interface.
 
-.NET Framework 4.7.2 or higher
-Once you have installed the prerequisites, you can download and install the app from the following link:
+## Installation
 
-[Download link]
+To embark on this stock management journey, you'll need to have:
 
-Usage
-To run the app, simply double-click on the executable file.
+- .NET Framework 4.7.2 or a higher level of wizardry!
 
-Admin Login
-To login as an admin, enter the following credentials:
+## Usage
 
-Username: admin
-Password: password
-Stock and Transaction Viewing
-Once you are logged in as an admin, you can view stocks and transactions by clicking on the "Stocks" and "Transactions" tabs, respectively.
+Ready to set sail? Just double-click on the executable file, and the adventure begins!
 
-CRUD Operations
-The app currently supports the following CRUD operations for stocks and transactions:
+### Admin Login ✨
 
-Create
-Read
-Update
-Delete
-To perform a CRUD operation, simply click on the corresponding button in the toolbar.
+Use these secret incantations to access admin privileges:
 
-Planned Features
-User registration and authentication
-Role-based access control
-Feedback
-If you have any feedback on the app, please feel free to open an issue or submit a pull request.
+- **Username:** admin
+- **Password:** admin
 
-Note: The app is still under development, so there may be some bugs. Please report any bugs that you find so that they can be fixed.
+### Stock and Transaction Viewing 👀
+
+As the admin of this magical realm, you can peek into the mysteries of your stock and transactions. Click on the "Stocks" and "Transactions" tabs to unveil their secrets.
+
+### CRUD Operations - Your Superpowers 🦸
+
+With StockSurge, you possess the following superpowers:
+
+- **Create:** Craft new stock items.
+- **Read:** Gaze into the depths of your stock levels and transaction logs.
+- **Update:** Command your stock levels to change.
+- **Delete:** Banish unwanted stock items into the void.
+
+## Feedback 📢
+
+Your voice is heard in this magical realm! If you have any enchanting feedback, or if you stumble upon hidden passages and treasure chests, don't hesitate to share. You can open an issue or even submit a magical pull request.
+
+**Note:** This app was conjured into existence as part of my grand COMP40003 Assessment quest.
+
+Feel the power of StockSurge! 🪄✨
