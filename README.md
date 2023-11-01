@@ -2,6 +2,12 @@
 
 Welcome to StockSurge, a user-friendly desktop application written in C#. This tool empowers you to efficiently manage your stock items and view transaction logs, all in a straightforward and intuitive manner. We've made stock management easy with an SQLite3 database and a clean, user-friendly WPF interface.
 
+## Technical Information
+
+StockSurge is a C# WPF Desktop Application designed to facilitate Create, Read, Update, and Delete (CRUD) operations for stock items. The architectural framework employed in the development of this application is the Model-View-ViewModel (MVVM) pattern, which enhances separation of concerns and code maintainability.
+
+Expanding upon this architectural foundation, we have also incorporated the concepts of Stores and Commands, primarily for navigation within the application. This ensures a structured and streamlined user experience.
+
 ## Installation
 
 Getting started with StockSurge is a breeze. Make sure you have:
