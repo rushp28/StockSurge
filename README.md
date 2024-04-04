@@ -7,7 +7,6 @@
 - C# - Programming Language / XAML - WPF UI Markup Language / SQL - Relational Database Handling Language
 
 
-
 - Model-View-ViewModel (MVVM) used as its architectural framework when developing this application
 
 
@@ -21,22 +20,34 @@
 
 ## Features
 
-1. **Authorized Admin Login** - The user must login with the admin credentials to gain access to the application
+1. **Authorized Admin Login** - Users must login with the admin credentials to gain access to the application
 
 
 2. **Create New Stock Items** - Users can easily create new stock items to add to the inventory
 
 
-3. **Remove Unused Stock Items** - Users have the ability to remove any stock items that are no longer needed or in use
+3. **Remove Unused Stock Items** - Users can easily remove any stock items that are no longer needed or in use
 
 
-4. **Adjust a Stock Item's Quantity** - Users are empowered to modify the quantity of stock items by adding to or subtracting from their current quantity
+4. **Adjust a Stock Item's Quantity** - Users can easily modify the quantity of stock items by adding to or subtracting from their current quantity
 
 
-5. **View Transaction Logs** - Users can conveniently access transaction logs, which provide a detailed record of each transaction carried out within the application
+5. **View Transaction Logs** - Users can easily access transaction logs, which provide a detailed record of each transaction carried out within the application
 
 
-6. **View Stock Levels** - Users can effortlessly monitor the stock levels of all stock items, ensuring they are aware of current inventory levels at all times
+6. **View Stock Levels** - Users can easily monitor the stock levels of all stock items, ensuring they are aware of current inventory levels at all times
+
+## Previews
+
+![Login Screen](StockSurge/Assets/Images/Previews/login_screen.png)
+
+![Home Screen](StockSurge/Assets/Images/Previews/home_screen.png)
+
+![Stock Item Editing Screen](StockSurge/Assets/Images/Previews/stock_item_editing_screen.png)
+
+![Stock Item Screen](StockSurge/Assets/Images/Previews/stock_item_screen.png)
+
+![Transaction Log Screen](StockSurge/Assets/Images/Previews/transaction_log_screen.png)
 
 ## Installation
 
