@@ -39,14 +39,19 @@
 
 ## Previews
 
+**Login Screen**
 ![Login Screen](StockSurge/Assets/Images/Previews/login_screen.png)
 
+**Home Screen**
 ![Home Screen](StockSurge/Assets/Images/Previews/home_screen.png)
 
+**Stock Item Editing Screen**
 ![Stock Item Editing Screen](StockSurge/Assets/Images/Previews/stock_item_editing_screen.png)
 
+**Stock Item Screen**
 ![Stock Item Screen](StockSurge/Assets/Images/Previews/stock_item_screen.png)
 
+**Transaction Log Screen**
 ![Transaction Log Screen](StockSurge/Assets/Images/Previews/transaction_log_screen.png)
 
 ## Installation
