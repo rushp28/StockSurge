@@ -1,12 +1,25 @@
-# StockSurge - 🚀 Your Friendly Stock Management Solution
+<h1 align="center">StockSurge</h1>
 
-Welcome to StockSurge, a user-friendly desktop application written in C#. This tool empowers you to efficiently manage your stock items and view transaction logs, all in a straightforward and intuitive manner. We've made stock management easy with an SQLite3 database and a clean, user-friendly WPF interface.
+<p align="center">StockSurge is a user-friendly desktop application that empowers you to efficiently manage your stock items and view the transaction logs, all on a straightfoward and intuitive interface.</p>
 
 ## Technical Information
 
-StockSurge is a C# WPF Desktop Application designed to facilitate Create, Read, Update, and Delete (CRUD) operations for stock items. The architectural framework employed in the development of this application is the Model-View-ViewModel (MVVM) pattern, which enhances separation of concerns and code maintainability.
+- C# - Programming Language / XAML - WPF UI Markup Langauge / SQL - Relational Database Handling Language
+- Model-View-ViewModel (MVVM) used as its architectural framework when developing this application
+- Stores and Commands are also used for further separation of concerns and code maintainability
+- Desktop Application that can do CRUD operations on Stock Items as well as Read the Transaction Logs
+- SQLite3 Database is used to store the data
 
-Expanding upon this architectural foundation, we have also incorporated the concepts of Stores and Commands, primarily for navigation within the application. This ensures a structured and streamlined user experience.
+## Features
+
+### Authorized Admin Login
+
+The user must enter the admin credentials in order to 
+
+Gain administrative access with the following credentials:
+
+- **Username:** admin
+- **Password:** admin
 
 ## Installation
 
@@ -22,10 +35,7 @@ Using StockSurge is a straightforward process. Just follow these simple steps:
 
 ### Admin Login 🛡️
 
-Gain administrative access with the following credentials:
 
-- **Username:** admin
-- **Password:** admin
 
 ### Exploring Your Stocks and Transactions 📈📊
 
