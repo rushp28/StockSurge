@@ -1,10 +1,10 @@
 <h1 align="center">StockSurge</h1>
 
-<p align="center">StockSurge is a user-friendly desktop application that empowers you to efficiently manage your stock items and view the transaction logs, all on a straightfoward and intuitive interface.</p>
+<p align="center">StockSurge is a user-friendly desktop application that empowers you to efficiently manage your stock items and view the transaction logs, all on a straightforward and intuitive interface.</p>
 
 ## Technical Information
 
-- C# - Programming Language / XAML - WPF UI Markup Langauge / SQL - Relational Database Handling Language
+- C# - Programming Language / XAML - WPF UI Markup Language / SQL - Relational Database Handling Language
 - Model-View-ViewModel (MVVM) used as its architectural framework when developing this application
 - Stores and Commands are also used for further separation of concerns and code maintainability
 - Desktop Application that can do CRUD operations on Stock Items as well as Read the Transaction Logs
@@ -14,7 +14,27 @@
 
 ### Authorized Admin Login
 
-The user must enter the admin credentials in order to 
+The user must login with the admin credentials to gain access to the application.
+
+### Create New Stock Items
+
+The user can create new stock items.
+
+### Remove Unused Stock Items
+
+The user can remove unused stock items.
+
+### Adjust a Stock Item's Quantity
+
+The user can add or remove from a stock item's quantity.
+
+### View Transaction Logs
+
+The user can view transaction logs for each transaction that has occured as mentioned above.
+
+### View Stock Levels
+
+The user can view the stock levels for each stock item.
 
 Gain administrative access with the following credentials:
 
@@ -32,26 +52,6 @@ Getting started with StockSurge is a breeze. Make sure you have:
 Using StockSurge is a straightforward process. Just follow these simple steps:
 
 1. Double-click on the executable file to start the application.
-
-### Admin Login 🛡️
-
-
-
-### Exploring Your Stocks and Transactions 📈📊
-
-Once you're logged in as an admin, you can navigate and explore your stock items and transaction logs with ease:
-
-- Click the "Stocks" tab to manage your stock items.
-- Access transaction logs by selecting the "Transactions" tab.
-
-### CRUD Operations Made Easy 🧰
-
-StockSurge simplifies the process of managing your stock items and transaction logs:
-
-- **Create:** Easily add new stock items to your inventory.
-- **Read:** View your current stock levels and access transaction logs effortlessly.
-- **Update:** Modify stock levels as required.
-- **Delete:** Remove stock items you no longer need with a simple click.
 
 ## We Value Your Feedback 🗣️
 
