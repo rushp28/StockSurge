@@ -12,29 +12,14 @@
 
 ## Features
 
-### Authorized Admin Login
+1. **Authorized Admin Login** - The user must login with the admin credentials to gain access to the application.
+2. **Create New Stock Items** - Users can easily create new stock items to add to the inventory.
+3. **Remove Unused Stock Items** - Users have the ability to remove any stock items that are no longer needed or in use.
+4. **Adjust a Stock Item's Quantity** - Users are empowered to modify the quantity of stock items by adding to or subtracting from their current quantity.
+5. **View Transaction Logs** - Users can conveniently access transaction logs, which provide a detailed record of each transaction carried out within the application.
+6. **View Stock Levels** - Users can effortlessly monitor the stock levels of all stock items, ensuring they are aware of current inventory levels at all times.
 
-The user must login with the admin credentials to gain access to the application.
-
-### Create New Stock Items
-
-The user can create new stock items.
-
-### Remove Unused Stock Items
-
-The user can remove unused stock items.
-
-### Adjust a Stock Item's Quantity
-
-The user can add or remove from a stock item's quantity.
-
-### View Transaction Logs
-
-The user can view transaction logs for each transaction that has occured as mentioned above.
-
-### View Stock Levels
-
-The user can view the stock levels for each stock item.
+##
 
 Gain administrative access with the following credentials:
 
