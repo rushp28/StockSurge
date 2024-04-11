@@ -1,12 +1,12 @@
 <div align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&weight=700&pause=10&color=1CC046&background=AE49FF00&center=true&vCenter=true&repeat=false&random=false&width=435&lines=StockSurge" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&weight=700&pause=10&color=3370F7FF&background=AE49FF00&center=true&vCenter=true&repeat=false&random=false&width=435&lines=StockSurge" alt="Typing SVG" />
   </a>
 </div>
 
 <p align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=1CC046&background=AE49FF00&center=true&vCenter=true&repeat=false&random=false&width=435&lines=Dev+Tools" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=3370F7FF&background=AE49FF00&center=true&vCenter=true&repeat=false&random=false&width=435&lines=Dev+Tools" alt="Typing SVG" />
   </a>
   <br>
   <a href="https://skillicons.dev">
@@ -14,11 +14,11 @@
   </a>
 </p>
 
-<p align="center">StockSurge is a user-friendly desktop application that empowers you to efficiently manage your stock items and view the transaction logs, all on a straightforward and intuitive Fira+Codeface.</p>
+<p align="center">StockSurge is a user-friendly desktop application that empowers you to efficiently manage your stock items and view the transaction logs, all on a straightforward and intuitive interface.</p>
 
 <div>
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=1CC046&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&lines=Technical+Info" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=3370F7FF&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&lines=Technical+Info" alt="Typing SVG" />
   </a>
 </div>
 
@@ -38,7 +38,7 @@
 
 <div>
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=1CC046&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&lines=Features" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=3370F7FF&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&lines=Features" alt="Typing SVG" />
   </a>
 </div>
 
@@ -61,7 +61,7 @@
 
 <div>
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=1CC046&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&lines=Previews" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=3370F7FF&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&lines=Previews" alt="Typing SVG" />
   </a>
 </div>
 
@@ -82,7 +82,7 @@
 
 <div>
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=1CC046&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&lines=Installation" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=3370F7FF&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&lines=Installation" alt="Typing SVG" />
   </a>
 </div>
 
@@ -105,7 +105,7 @@
 
 <div>
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=1CC046&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&lines=I+Value+Your+Feedback!" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=3370F7FF&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&lines=I+Value+Your+Feedback!" alt="Typing SVG" />
   </a>
 </div>
 
