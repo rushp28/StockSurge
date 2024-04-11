@@ -1,8 +1,12 @@
-<h1 align="center">StockSurge</h1>
+<div align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&weight=700&pause=10&color=1CC046&background=AE49FF00&center=true&vCenter=true&repeat=false&random=false&width=435&lines=StockSurge" alt="Typing SVG" />
+  </a>
+</div>
 
 <p align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=700&pause=10&color=1CC046&background=AE49FF00&center=true&vCenter=true&repeat=false&random=false&width=435&lines=Dev+Tools" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=1CC046&background=AE49FF00&center=true&vCenter=true&repeat=false&random=false&width=435&lines=Dev+Tools" alt="Typing SVG" />
   </a>
   <br>
   <a href="https://skillicons.dev">
@@ -10,11 +14,11 @@
   </a>
 </p>
 
-<p align="center">StockSurge is a user-friendly desktop application that empowers you to efficiently manage your stock items and view the transaction logs, all on a straightforward and intuitive interface.</p>
+<p align="center">StockSurge is a user-friendly desktop application that empowers you to efficiently manage your stock items and view the transaction logs, all on a straightforward and intuitive Fira+Codeface.</p>
 
-<div align="center">
+<div>
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=700&pause=10&color=1CC046&background=AE49FF00&center=true&vCenter=true&repeat=false&random=false&width=435&lines=Technical+Info" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=1CC046&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&lines=Technical+Info" alt="Typing SVG" />
   </a>
 </div>
 
@@ -32,7 +36,11 @@
 
 - SQLite3 Database is used to store the data
 
-    Features
+<div>
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=1CC046&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&lines=Features" alt="Typing SVG" />
+  </a>
+</div>
 
 1. **Authorized Admin Login** - Users must login with the admin credentials to gain access to the application
 
@@ -51,7 +59,11 @@
 
 6. **View Stock Levels** - Users can easily monitor the stock levels of all stock items, ensuring they are aware of current inventory levels at all times
 
-## Previews
+<div>
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=1CC046&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&lines=Previews" alt="Typing SVG" />
+  </a>
+</div>
 
 **Login Screen**
 ![Login Screen](StockSurge/Assets/Images/Previews/login_screen.png)
@@ -68,7 +80,11 @@
 **Transaction Log Screen**
 ![Transaction Log Screen](StockSurge/Assets/Images/Previews/transaction_log_screen.png)
 
-## Installation
+<div>
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=1CC046&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&lines=Installation" alt="Typing SVG" />
+  </a>
+</div>
 
 ### Dependencies
 
@@ -87,7 +103,11 @@
 
 4. Start managing your stock items
 
-## I Value Your Feedback!
+<div>
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=1CC046&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&lines=I+Value+Your+Feedback!" alt="Typing SVG" />
+  </a>
+</div>
 
 I am committed to making StockSurge better with your input. If you have suggestions, encounter any issues, or have ideas for improvement, please reach out to me. You can open an issue or even contribute via a pull request.
 
