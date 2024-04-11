@@ -14,7 +14,7 @@
 
 <div>
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=3370F7FF&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&height=25&lines=Technical+Info" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=3370F7FF&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&height=35&lines=Technical+Info" alt="Typing SVG" />
   </a>
 </div>
 
@@ -26,7 +26,7 @@
 
 <div>
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=3370F7FF&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&height=25&lines=Features" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=3370F7FF&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&height=35&lines=Features" alt="Typing SVG" />
   </a>
 </div>
 
@@ -39,7 +39,7 @@
 
 <div>
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=3370F7FF&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&height=25&lines=Previews" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=3370F7FF&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&height=35&lines=Previews" alt="Typing SVG" />
   </a>
 </div>
 
@@ -60,7 +60,7 @@
 
 <div>
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=3370F7FF&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&height=25&lines=Installation" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=3370F7FF&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&height=35&lines=Installation" alt="Typing SVG" />
   </a>
 </div>
 
@@ -79,7 +79,7 @@
 
 <div>
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=3370F7FF&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&height=25&lines=I+Value+Your+Feedback!" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=3370F7FF&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&height=35&lines=I+Value+Your+Feedback!" alt="Typing SVG" />
   </a>
 </div>
 
