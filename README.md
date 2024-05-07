@@ -6,7 +6,7 @@
 
 <div align="center">
     <a href="https://skillicons.dev">
-        <img src="https://skillicons.dev/icons?i=cs,dotnet,sqlite,rider&theme=dark" />
+        <img src="https://skillicons.dev/icons?i=cs,dotnet,sqlite,git,rider&theme=dark" />
     </a>
     <p>StockSurge is a user-friendly desktop application that empowers you to efficiently manage your stock items and view the transaction logs, all on a straightforward and intuitive interface.</p>
 </div>
@@ -17,10 +17,14 @@
     </a>
     <ul>
         <li>Programming Language: C#</li>
+        <li>Development Environment: .NET Core 3.1</li>
         <li>UI Markup Language: XAML</li>
         <li>Database Handling Language: SQL</li>
+        <li>Version Control: Git</li>
+        <li>Programming Paradigm(s): Objected-Oriented, Procedural</li>
         <li>Architectural Framework: Model-View-ViewModel (MVVM)</li>
         <li>Database: SQLite3</li>
+        <li>IDE: JetBrains Rider</li>
     </ul>
 </div>
 
