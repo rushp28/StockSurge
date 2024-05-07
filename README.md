@@ -92,6 +92,11 @@
     </a>
     <ol>
         <li>Clone the repository to your local computer.</li>
+        <li>Compile the files to get an executable file by running the following command in the terminal:
+            <code>
+                dotnet build StockSurge.csproj
+            </code>
+        </li>
         <li>Navigate to the bin folder and double click on "StockSurge.exe".</li>
         <li>Login as an admin (username: admin, password: admin).</li>
         <li>Start managing your stock items!</li>
