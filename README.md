@@ -2,6 +2,9 @@
     <a href="https://git.io/typing-svg">
         <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&weight=700&pause=10&color=27F786&background=AE49FF00&center=true&vCenter=true&repeat=false&random=false&width=435&lines=StockSurge" alt="Typing SVG" />
     </a>
+</div>
+
+<div align="center">
     <a href="https://skillicons.dev">
         <img src="https://skillicons.dev/icons?i=cs,sqlite,rider&theme=dark" />
     </a>
