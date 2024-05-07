@@ -6,7 +6,7 @@
 
 <div align="center">
     <a href="https://skillicons.dev">
-        <img src="https://skillicons.dev/icons?i=cs,sqlite,rider&theme=dark" />
+        <img src="https://skillicons.dev/icons?i=cs,dotnet,sqlite,rider&theme=dark" />
     </a>
     <p>StockSurge is a user-friendly desktop application that empowers you to efficiently manage your stock items and view the transaction logs, all on a straightforward and intuitive interface.</p>
 </div>
@@ -78,6 +78,9 @@
     <a href="https://git.io/typing-svg">
         <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=10&color=27F786&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&height=35&lines=Installation" alt="Typing SVG" />
     </a>
+</div>
+
+<div>
     <a href="https://git.io/typing-svg">
         <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=15&weight=700&pause=10&color=27F786&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&height=35&lines=Dependancies" alt="Typing SVG" />
     </a>
