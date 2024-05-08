@@ -17,13 +17,12 @@
     </a>
     <ul>
         <li>Programming Language: C#</li>
-        <li>Development Environment: .NET Core 3.1</li>
+        <li>Software Framework: .NET Framework</li>
         <li>UI Markup Language: XAML</li>
-        <li>Database Handling Language: SQL</li>
+        <li>Database: SQLite3</li>
         <li>Version Control: Git</li>
         <li>Programming Paradigm(s): Objected-Oriented, Procedural</li>
         <li>Architectural Framework: Model-View-ViewModel (MVVM)</li>
-        <li>Database: SQLite3</li>
         <li>IDE: JetBrains Rider</li>
     </ul>
 </div>
@@ -89,7 +88,7 @@
         <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=15&weight=700&pause=10&color=27F786&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&height=35&lines=Dependencies" alt="Dependencies" />
     </a>
     <ul>
-        <li>.NET Framework 4.7.2 or a higher version installed on your system</li>
+        <li>.NET Framework 4.7.2 or a higher version installed on your local computer.</li>
     </ul>
     <a href="https://git.io/typing-svg">
         <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=15&weight=700&pause=10&color=27F786&background=AE49FF00&center=false&vCenter=true&repeat=false&random=false&width=435&height=35&lines=Getting+Started" alt="Getting Started" />
@@ -98,7 +97,7 @@
         <li>Clone the repository to your local computer.</li>
         <li>Compile the files to get an executable file by running the following command in the terminal:</li>
         <code>dotnet build StockSurge.csproj</code>
-        <li>Navigate to the bin folder and double click on "StockSurge.exe".</li>
+        <li>Navigate to the bin folder and double-click on "StockSurge.exe".</li>
         <li>Login as an admin (username: admin, password: admin).</li>
         <li>Start managing your stock items!</li>
     </ol>
