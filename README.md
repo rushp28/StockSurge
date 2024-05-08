@@ -8,7 +8,6 @@
     <a href="https://skillicons.dev">
         <img src="https://skillicons.dev/icons?i=cs,dotnet,sqlite,git,rider&theme=dark" />
     </a>
-    <p>StockSurge is a user-friendly desktop application that empowers you to efficiently manage your stock items and view the transaction logs, all on a straightforward and intuitive interface.</p>
 </div>
 
 <div>
